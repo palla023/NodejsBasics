@@ -41,7 +41,10 @@ http.createServer((req,res)=>{
 /*
 var url = require('url');
 var addr = 'http://localhost:8080/home.html?year=2018&month=feb'
-var q = url.parse(addr,true);
+var q = url.parse(addr,true); //without  true - > 'year=2018&month=feb'  // Query remains a string
+	Key Benefits of Using true
+	✔ Converts query string into an easily accessible object - { year: '2018', month: 'feb' }  
+	✔ Allows direct access to query parameters
 console.log(q.search); //q.pathname q.search
  */
 
